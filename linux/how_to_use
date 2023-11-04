@@ -1,0 +1,16 @@
+#将clash-linux-amd64-v1.18.0.gz压缩包解压到任意目录
+
+#使用./clash-linux-amd64运行解压后的文件
+
+#第一次执行会报错，按ctrl+c结束命令
+
+#将~/.config/clash/config.yaml的内容清除，改为iKuuu_V2.yaml里面的内容
+
+#打开系统网络代理设置
+
+#选择手动
+
+#将所有连接的ip地址改为127.0.0.1,端口为7890(默认端口，在~/.config/clash/config.yaml的配置文中可以修改port和socks-port来适应实际需求)
+
+#使用./clash-linux-amd64运行解压后的文件
+如果端口被占用，在~/.config/clash/config.yaml配置文件中修改port和socks-port的值（同时也要修改系统代理的端口）或者杀占用端口的进程
