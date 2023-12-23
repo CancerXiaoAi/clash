@@ -14,3 +14,19 @@
 
 #使用./clash-linux-amd64运行解压后的文件
 如果端口被占用，在~/.config/clash/config.yaml配置文件中修改port和socks-port的值（同时也要修改系统代理的端口）或者杀占用端口的进程
+
+#自定义节点
+vim ~/.config/clash/config.yaml
+在配置文件中，你可以找到一个名为  proxies  的部分，其中列出了可用的节点。找到你想要使用的节点，并记下它的名称。
+在配置文件的顶部，你会看到一个名为  proxy-groups  的部分，其中定义了不同的代理组。找到你想要修改的代理组，并确保它的  type  设置为  select  。
+在该代理组的  proxies  列表中，将你想要使用的节点名称添加到列表中，确保它是第一个节点。例如：
+
+     proxy-groups:
+     - name: MyProxyGroup
+       type: select
+       proxies:
+         - MyCustomProxy
+         - Proxy1
+         - Proxy2
+         ...
+   
