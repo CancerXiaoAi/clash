@@ -29,4 +29,5 @@ vim ~/.config/clash/config.yaml
          - Proxy1
          - Proxy2
          ...
-   
+         
+tip: 如果~/.config/clash下不存在Country.mmdb文件，则手动将Country.mmdb复制到该目录下
